@@ -41,25 +41,46 @@
 // }
 
 //populate brand drop down
+
+
 $(document).ready(function () {
-    $.each(Brands, function (Brand,obj){
-        $("#brand").append($('<option></option>').val(obj.Brand).html(obj.Brand));
     
-    });
-  
-  });  
+
+   var Erik = document.getElementById('brand');
+   
+   LightList.forEach(function(BrandR){
+    var newOption = document.createElement ("option");  
+    newOption.setAttribute('value', BrandR.Brand);
+    newOption.innerHTML= BrandR.Brand;
+    Erik.appendChild(newOption);
+   })
+   
+    //  for (var i = 0; i < LightList.length; i++) {
+    //    ele.innerHTML = ele.innerHTML + '<option value=' + LightList[i]['Brand'] + '</option';
+    //  }
+     
+   
     
-// populate model drop down
-    function populateModelList(){
+    
+//     $.each(LightList, function (Brand,obj){
+//         $("#brand").append($('<option></option>').val(obj.Brand).html(obj.Brand));
+    
+//     });
   
-        var brandList = document.getElementById('brand');
-        var modelList = document.getElementById("model");
+//   });  
+    
+// // populate model drop down
+//     function populateModelList(){
+  
+//         var brandList = document.getElementById('brand');
+//         var modelList = document.getElementById("model");
        
-        var selectedBrand = brandList.value;   
+//         var selectedBrand = brandList.value;   
+//       var model= LightList.Brand[selectedBrand]
       
-        if (selectedBrand== value('obj.Brand'))
-        {
+       
+//         $.each(Model,  function(Model,obj){
+//            $("#model").append($('<option></option>').val(obj.model).html(obj.Model))
+//        })
 
-        }
-
-    } 
+});

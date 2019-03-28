@@ -1,4 +1,4 @@
-var Brands= [ 
+var LightList= [ 
         { "Brand":"Arri",
             "Models": [ { "Model": "M18 1200w 1- Spot",
                         "Angle":15,
@@ -29,7 +29,7 @@ var Brands= [
                 Diameter:14.6}]
         },
 
-        { "Brand":"Digital Sputnik Tungsten",
+        { "Brand":"Digital Sputnik",
          "Models":[ { Model: "DS1 Daylight",
                 Angle:20,
                 FC: 1336,

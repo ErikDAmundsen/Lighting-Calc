@@ -47,16 +47,19 @@ $(document).ready(function () {
     
     });
   
-   
-// // populate model drop down
-//      populateModelList(){
+  });  
+    
+// populate model drop down
+    function populateModelList(){
+  
+        var brandList = document.getElementById('brand');
+        var modelList = document.getElementById("model");
+       
+        var selectedBrand = brandList.value;   
+      
+        if (selectedBrand== value('obj.Brand'))
+        {
 
-//         var selectedBrand = brandList.options[brandList.selectedIndex].value;
-        
-//         if (selectedBrand== val('obj.Brand'))
-//         {
+        }
 
-//         }
-
-//     } 
-//  });
+    } 

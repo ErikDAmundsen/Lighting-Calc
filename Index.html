@@ -17,7 +17,7 @@
     <div class = "col-md-4" id = "drop down" > 
       <form>
     <H3> Choose brand</h3>
-        <select id = "brand" name= "brand">  
+        <select id = "brand" name= "brand" onchange="populateModelList()">  
             <option value="" selected disabled hidden>Choose a brand</option>  
 <!-- <option value> Please Select</option>
 <option value= 1>Arri </option>
@@ -36,11 +36,15 @@
 
         </select>
 <H3>Select Model</H3>
-        <select id ="model" name="model" onclick="populateModelList()">
-          
+        <select id ="model" name="model" >
+          <option value="" selected disabled hidden>Choose a model</option>  
         
         </select>
       </form>
+    
+    </div>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
     </div>
 
 

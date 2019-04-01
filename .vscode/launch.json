@@ -15,6 +15,12 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
+            "program": "${workspaceFolder}/FULL1.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
             "program": "${workspaceFolder}/Objects.js"
         },
         {

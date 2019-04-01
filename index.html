@@ -19,20 +19,7 @@
     <H3> Choose brand</h3>
         <select id = "brand" name= "brand" onchange="populateModelList()">  
             <option value="" selected disabled hidden>Choose a brand</option>  
-<!-- <option value> Please Select</option>
-<option value= 1>Arri </option>
-<option value= 2>Astera </option>
-<option value= 3>Digital Sputnik  </option>
-<option value= 4>DMG Lumiere  </option>
-<option value= 5>ETC Source  </option>
-<option value= 6>K5600 Joker bug  </option>
-<option value= 7>Kino Flo  </option>
-<option value= 8>Litemat+  </option>
-<option value= 9>Lite Panels  </option>
-<option value= 10>Lite Tile  </option>
-<option value= 11>Mole  </option>
-<option value= 12>Quasar  </option>
-<option value= 13>Westcott  </option> -->
+
 
         </select>
 <H3>Select Model</H3>
@@ -44,15 +31,23 @@
     
     </div>
     <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <p>Distance: <span id="DistOP"></span></p>
+      <input type="range" min="1" max="150" step = 1 value="50" class="slider" id="DistSlider"oninput="upateSliders(this.value)" onchange="upateSliders(this.value)">
+    </br>
+    <p>Diameter: <span id="DMTOP"></span></p>
+      <input type="range" min="1" max="1500" step = 1 value="700" class="slider" id="DMTSlider"oninput="upateSliders(this.value)" onchange="upateSliders(this.value)">
+    </br>
+    <p>Foot candles: <span id="FCOP"></span></p>
+      <input type="range" min="1" max="100000" step = 1 value="50" class="slider" id="FCSlider"oninput="upateSliders(this.value)" onchange="upateSliders(this.value)">
     </div>
 
-
+    <!-- onchange="upateSliders(this.value) -->
 
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
    <script src="objects.js"></script>
   <script src="methods.js"></script>
+  <script src="FULL1.js"></script>
 </body>
 </html>

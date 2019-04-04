@@ -1,3 +1,7 @@
+
+//ALL OF THIS WAS REPLACED IN FULL1.js
+
+
 var LightList = [
         {
                 "Brand": "Arri",

@@ -9,13 +9,20 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/Methods.js"
+            "program": "${workspaceFolder}/dropDown.js"
         },
         {
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/FULL1.js"
+            "program": "${workspaceFolder}/Sliders.js"
+        },
+
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}/jsonObjects.js"
         },
         {
             "type": "node",

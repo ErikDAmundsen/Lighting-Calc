@@ -1,5 +1,3 @@
-
-
 //populate brand drop down
 $(document).ready(function () {
 
@@ -37,7 +35,7 @@ function populateModelList() {
         var newOption = document.createElement("option");
         newOption.innerHTML = model.Model;
         ModelList.appendChild(newOption);
+
+       
     })};
-
-
-
+    

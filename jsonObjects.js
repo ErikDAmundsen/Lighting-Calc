@@ -3,7 +3,7 @@
    
           {
             "Brand": "Arri",
-            "Model": " M18 (1200w 1 - SPOT)",
+            "Model": "M18 (1200w 1 - SPOT)",
             "Type": "HMI",
             "Style": "Open Face",
             "Color Temp": 6000,

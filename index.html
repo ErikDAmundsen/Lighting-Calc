@@ -23,8 +23,8 @@
 
         </select>
 <H3>Select Model</H3>
-        <select id ="model" name="model" >
-          <option value="" selected disabled hidden>Choose a model</option>  
+        <select id ="model" name="model" oninput="fillValues()" >
+          <option value="" >Choose a model</option>  
         
         </select>
       </form>
@@ -32,13 +32,14 @@
     </div>
     <div class="slidecontainer">
         <p>Distance: <span id="DistOP"></span></p>
-      <input type="range" min="1" max="150" step = 1 value="50" class="slider" id="DistSlider"oninput="upateSliders(this.value)" onchange="upateSliders(this.value)">
+      <input type="range" min="1" max="150" step = 1 value="0" class="slider" id="DistSlider"oninput="upateSliders(this.value)" onchange="upateSliders(this.value,null,null)">
     </br>
     <p>Diameter: <span id="DMTOP"></span></p>
-      <input type="range" min="1" max="1500" step = 1 value="700" class="slider" id="DMTSlider"oninput="upateSliders(this.value)" onchange="upateSliders(this.value)">
+      <input type="range" min="1" max="1500" step = 1 value="0" class="slider" id="DMTSlider"oninput="upateSliders(this.value)" onchange="upateSliders(null,this.value,null)">
     </br>
     <p>Foot candles: <span id="FCOP"></span></p>
-      <input type="range" min="1" max="100000" step = 1 value="50" class="slider" id="FCSlider"oninput="upateSliders(this.value)" onchange="upateSliders(this.value)">
+      <input type="range" min="1" max="100000" step = 1 value="0" class="slider" id="FCSlider"oninput="upateSliders(this.value)" onchange="upateSliders(null,null,this.value)">
+    <p >Beam angle:<span id="BeamAngle"></sapn> </p>
     </div>
 
     <!-- onchange="upateSliders(this.value) -->
@@ -46,9 +47,8 @@
   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-   <script src="objects.js"></script>
+   <script src="jsonObjects.js"></script>
   <script src="dropDown.js"></script>
-  <script src="jsonObjects.js"></script>
   <script src="Sliders.js"></script>
 
 </body>

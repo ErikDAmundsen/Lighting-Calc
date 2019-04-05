@@ -29,25 +29,69 @@ FCOutput.innerHTML = SM["FC @ 5’ (Daylight)"];
  
 }
 
-//Master update function
-function upateSliders(value) {
-
-    updateDistSlider();
-    updateDiaSlider();
-    upadteFCSlider();
-
-};
-
-function updateDistSlider(){
-
+// //Master update function
+// function upateSliders(value1,value2,value3) {
     
+//   var TestResult=   Maths(value1,value2,value3);
+// console.log(TestResult);
+//     updateDiaSlider(TestResult);
+//     var x=5;
+  
+    
+
+  
+
+// };
+
+function updateDiaSlider(TestResult){
+    DiameterSlider.value = TestResult;
+DiameterOutput.innerHTML =TestResult;
+
 }
+
+//updating 2 sliders when you update distance slider
+function fromDist(){
+  var DiaResult =  MDst2Dia(DiaResult); 
+  DiameterSlider.value = DiaResult;
+  DiameterOutput.innerHTML= DiaResult;
+
+  var FCResult =  MDst2FC(FCResult);
+    FCSlider.value= FCResult;
+    FCOutput.innerHTML = FCResult;
+}
+// updating other 2 sliders when you update diameter
+function fromDiameter()
+{
+    var DistResult = MDia2Dist(DistResult);
+DistSlider.value = DistResult;
+DistOutput.innerHTML = DistResult;
+   var FCResult = MDia2FC(DistResult,FCResult);
+   FCSlider.value = FCResult;
+   FCOutput.innerHTML = FCResult;
+}
+
+// update other 2 sliders when you update FC
+function fromFC(){
+   
+var DistResult =  MFC2Dist(DistResult);
+DistSlider.value = DistResult;
+DistOutput.innerHTML= DistResult;
+
+  var DiaResult =  MFC2Dia(DistResult, DiaResult);
+  DiameterSlider.value = DiaResult;
+  DiameterOutput.innerHTML = DiaResult;
+
+}
+
+
+
+
 //distance slider
 
 DistSlider.oninput = function () {
+  DistOutput.innerHTML = DistSlider.value;
 
-
-    DistOutput.innerHTML = DistSlider.value;
+  
     
 };
 //diameter slider

@@ -32,13 +32,13 @@
     </div>
     <div class="slidecontainer">
         <p>Distance: <span id="DistOP"></span></p>
-      <input type="range" min="1" max="150" step = 1 value="0" class="slider" id="DistSlider"oninput="upateSliders(this.value)" onchange="upateSliders(this.value,null,null)">
+      <input type="range" min="1" max="150" step = 1 value="0" data-ModelValue="" class="slider" id="DistSlider" onchange="fromDist()">
     </br>
     <p>Diameter: <span id="DMTOP"></span></p>
-      <input type="range" min="1" max="1500" step = 1 value="0" class="slider" id="DMTSlider"oninput="upateSliders(this.value)" onchange="upateSliders(null,this.value,null)">
+      <input type="range" min="1" max="1500" step = 1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
     </br>
     <p>Foot candles: <span id="FCOP"></span></p>
-      <input type="range" min="1" max="100000" step = 1 value="0" class="slider" id="FCSlider"oninput="upateSliders(this.value)" onchange="upateSliders(null,null,this.value)">
+      <input type="range" min="1" max="100000" step = 1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
     <p >Beam angle:<span id="BeamAngle"></sapn> </p>
     </div>
 
@@ -50,6 +50,7 @@
    <script src="jsonObjects.js"></script>
   <script src="dropDown.js"></script>
   <script src="Sliders.js"></script>
+  <script src="Math.js"></script>
 
 </body>
 </html>

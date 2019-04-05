@@ -23,26 +23,38 @@
 
         </select>
 <H3>Select Model</H3>
-        <select id ="model" name="model" oninput="fillValues()" >
+        <select id ="model" name="model" oninput="fillValues()", onchange="extractJSON(GetCurrentModel(),'')" >
           <option value="" >Choose a model</option>  
         
         </select>
       </form>
-    
+    </div>
+  </br>
     </div>
     <div class="slidecontainer">
-        <p>Distance: <span id="DistOP"></span></p>
+     <div display: inline-block;>
+        <span>Distance: <span id="DistOP"></span></span>
+     </br>
       <input type="range" min="1" max="150" step = 1 value="0" data-ModelValue="" class="slider" id="DistSlider" onchange="fromDist()">
-    </br>
-    <p>Diameter: <span id="DMTOP"></span></p>
-      <input type="range" min="1" max="1500" step = 1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
-    </br>
-    <p>Foot candles: <span id="FCOP"></span></p>
-      <input type="range" min="1" max="100000" step = 1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
-    <p >Beam angle:<span id="BeamAngle"></sapn> </p>
     </div>
+    </br>
+    <div class="slidecontainer">
+    <span>Diameter: <span id="DMTOP"></span></span>
+  </br>
+      <input type="range" min="1" max="1500" step = 1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
+    </div>
+  </br>
+  <div class="slidecontainer">
+    <span>Foot candles: <span id="FCOP"></span></span>
+  </br>
+      <input type="range" min="1" max="100000" step = 1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
+  </br>
+</br>
+   <span >Beam angle:<span id="BeamAngle"></sapn> </span>
+    </div>
+  </div>
     <div id="Referencedata">
-      <button onclick="extractJSON(GetCurrentModel(),'')"> press here</button>
+      
       <p id="showData"> </p>
     </div>
 

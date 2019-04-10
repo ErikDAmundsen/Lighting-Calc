@@ -24,7 +24,7 @@
 
       </select>
       <H3>Select Model</H3>
-      <select id="model" name="model" oninput="fillValues()" , onchange="extractJSON(GetCurrentModel(),'')">
+      <select id="model" name="model"  onchange=" extractJSON(GetCurrentModel(),'')" oninput="fillValues()" >
         <option value="">Choose a model</option>
        </select>
         
@@ -34,8 +34,8 @@
   <form>
         </br>
        
-        <input type="radio" name="TUNGorDAY" value="Tungsten" onchange="TDfillValues()">Tungsten</br>
-        <input type="radio" name="TUNGorDAY" value="Day Light" onchange="TDfillValues()">Day Light
+        <input type="radio" name ="TungDay" id= "Tungsten"  value="Tungsten" onchange="TDfillValues()">Tungsten</br>
+        <input type="radio" name ="TungDay" id = "Day Light"  value="Day Light" onchange="TDfillValues()">Day Light
       </form>
       </div> 
   </br>
@@ -68,16 +68,17 @@
     <p id="showData"> </p>
   </div>
 
-  <!-- onchange="upateSliders(this.value) -->
+  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <script src="jsonObjects.js"></script>
+   <script src="RefrenceSheet.js"></script>
   <script src="dropDown.js"></script>
   <script src="Sliders.js"></script>
   <script src="Math.js"></script>
-  <script src="RefrenceSheet.js"></script>
+ 
 
 </body>
 

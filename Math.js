@@ -1,14 +1,3 @@
-function Maths(){
-    var SM = GetCurrentModel();
-   
-
-   
-
-
-
-
-}
-
 
 // FromDist
 function MDst2Dia()

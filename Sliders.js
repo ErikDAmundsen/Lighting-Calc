@@ -5,42 +5,72 @@ var DiameterSlider = document.getElementById("DMTSlider");
 var DiameterOutput = document.getElementById("DMTOP");
 var FCSlider = document.getElementById("FCSlider");
 var FCOutput = document.getElementById("FCOP");
-var SM = GetCurrentModel();
+var FC = GetCurrentFC();
 // reusable function to get object of selected model
-function GetCurrentModel(){
+function GetCurrentModel()
+{
 var ModelList = document.getElementById('model');
  currentModel = ModelList.value;
  var SelectedModel = FullSpecs.filter(Mix => $.trim(Mix["Model"]) == currentModel);
  return SelectedModel[0];
+};
+function GetCurrentFC()
+var SM = GetCurrentModel();
+var FC = null;
+{
+  if (document.getElementById("Tungsten").checked = true)
+  {
+FC = SM["FC @ 5’ (Tungsten)        ."];
+  }
+  else if (document.getElementById("Day Light").checked = true)
+   { FC = SM["FC @ 5’ (Daylight)"];
 }
-
+return FC;
+}
+var SM = GetCurrentModel();
 //assign slider values and Beam angle to start
 function fillValues(){
 
 var SM = GetCurrentModel();
-if (SM["FC @ 5’ (Daylight)"] == null || SM["FC @ 5’ (Tungsten)        ."]== null)
+if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)        ."]!== null)
 {
 document.getElementById("TungRadio").style.visibility = "visible";
+
 resetSliders();
 
 }
-else
+
+else if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)        ."] == null )
 {
+  document.getElementById("TungRadio").style.visibility ="hidden";
+  var BeamA = document.getElementById("BeamAngle");
+  BeamA.innerHTML= SM["Beam Angle"]
+  DistSlider.value = 5;
+  DistOutput.innerHTML = 5;
+  DiameterSlider.value = SM["Spot Diameter @ 5'"];
+  DiameterOutput.innerHTML = SM["Spot Diameter @ 5'"];
+  FCSlider.value = SM["FC @ 5’ (Daylight)"];
+  FCOutput.innerHTML = SM["FC @ 5’ (Daylight)"];
+
+}
+else if (SM["FC @ 5’ (Daylight)"] == null && SM["FC @ 5’ (Tungsten)        ."] !== null )
+{
+  document.getElementById("TungRadio").style.visibility ="hidden";
 var BeamA = document.getElementById("BeamAngle");
 BeamA.innerHTML= SM["Beam Angle"]
 DistSlider.value = 5;
 DistOutput.innerHTML = 5;
 DiameterSlider.value = SM["Spot Diameter @ 5'"];
 DiameterOutput.innerHTML = SM["Spot Diameter @ 5'"];
-FCSlider.value = SM["FC @ 5’ (Daylight)"];
-FCOutput.innerHTML = SM["FC @ 5’ (Daylight)"];
-}
-}
-function TDfillValues() 
+FCSlider.value = SM["FC @ 5’ (Tungsten)        ."];
+FCOutput.innerHTML = SM["FC @ 5’ (Tungsten)        ."];
+}};
 
+function TDfillValues() 
+// document.querySelector('input[name="gender"]:checked').value
 {
   var SM = GetCurrentModel();
- if (SM["FC @ 5’ (Daylight)"] == null)
+ if (document.getElementById("Tungsten").checked ==true)
  {
   var BeamA = document.getElementById("BeamAngle");
   BeamA.innerHTML= SM["Beam Angle"]
@@ -51,7 +81,7 @@ function TDfillValues()
   FCSlider.value = SM["FC @ 5’ (Tungsten)        ."];
   FCOutput.innerHTML = SM["FC @ 5’ (Tungsten)        ."];
  }
-else if (SM["FC @ 5’ (Tungsten)        ."] == null)
+else if (document.getElementById("Day Light").checked ==true)
 {
   var BeamA = document.getElementById("BeamAngle");
   BeamA.innerHTML= SM["Beam Angle"]
@@ -129,6 +159,10 @@ function resetSliders()
   FCSlider.value = 0;
   FCOutput.innerHTML = 0;
 
+}
+function RadioInvis()
+{
+  document.getElementById("TungRadio").style.visibility ="hidden";
 }
 
 //distance slider

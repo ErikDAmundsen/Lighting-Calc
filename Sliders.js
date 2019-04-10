@@ -14,7 +14,7 @@ var ModelList = document.getElementById('model');
  var SelectedModel = FullSpecs.filter(Mix => $.trim(Mix["Model"]) == currentModel);
  return SelectedModel[0];
 };
-function GetCurrentFC()
+function GetCurrentFC();
 var SM = GetCurrentModel();
 var FC = null;
 {

@@ -51,21 +51,21 @@ DiameterOutput.innerHTML =TestResult;
 
 //updating 2 sliders when you update distance slider
 function fromDist(){
-  var DiaResult =  MDst2Dia(DiaResult); 
+  var DiaResult =  Math.round(MDst2Dia(DiaResult)*10)/10; 
   DiameterSlider.value = DiaResult;
   DiameterOutput.innerHTML= DiaResult;
 
-  var FCResult =  MDst2FC(FCResult);
+  var FCResult =  Math.round(MDst2FC(FCResult));
     FCSlider.value= FCResult;
     FCOutput.innerHTML = FCResult;
 }
 // updating other 2 sliders when you update diameter
 function fromDiameter()
 {
-    var DistResult = MDia2Dist(DistResult);
+    var DistResult = Math.round(MDia2Dist(DistResult));
 DistSlider.value = DistResult;
 DistOutput.innerHTML = DistResult;
-   var FCResult = MDia2FC(DistResult,FCResult);
+   var FCResult = Math.round(MDia2FC(DistResult,FCResult));
    FCSlider.value = FCResult;
    FCOutput.innerHTML = FCResult;
 }
@@ -73,11 +73,11 @@ DistOutput.innerHTML = DistResult;
 // update other 2 sliders when you update FC
 function fromFC(){
    
-var DistResult =  MFC2Dist(DistResult);
+var DistResult =  Math.round(MFC2Dist(DistResult));
 DistSlider.value = DistResult;
 DistOutput.innerHTML= DistResult;
 
-  var DiaResult =  MFC2Dia(DistResult, DiaResult);
+  var DiaResult =  Math.round(MFC2Dia(DistResult, DiaResult)*10)/10;
   DiameterSlider.value = DiaResult;
   DiameterOutput.innerHTML = DiaResult;
 

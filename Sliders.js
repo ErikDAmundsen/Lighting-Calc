@@ -5,7 +5,7 @@ var DiameterSlider = document.getElementById("DMTSlider");
 var DiameterOutput = document.getElementById("DMTOP");
 var FCSlider = document.getElementById("FCSlider");
 var FCOutput = document.getElementById("FCOP");
-
+var SM = GetCurrentModel();
 // reusable function to get object of selected model
 function GetCurrentModel(){
 var ModelList = document.getElementById('model');
@@ -18,6 +18,14 @@ var ModelList = document.getElementById('model');
 function fillValues(){
 
 var SM = GetCurrentModel();
+if (SM["FC @ 5’ (Daylight)"] == null || SM["FC @ 5’ (Tungsten)        ."]== null)
+{
+document.getElementById("TungRadio").style.visibility = "visible";
+resetSliders();
+
+}
+else
+{
 var BeamA = document.getElementById("BeamAngle");
 BeamA.innerHTML= SM["Beam Angle"]
 DistSlider.value = 5;
@@ -26,9 +34,35 @@ DiameterSlider.value = SM["Spot Diameter @ 5'"];
 DiameterOutput.innerHTML = SM["Spot Diameter @ 5'"];
 FCSlider.value = SM["FC @ 5’ (Daylight)"];
 FCOutput.innerHTML = SM["FC @ 5’ (Daylight)"];
- 
 }
+}
+function TDfillValues() 
 
+{
+  var SM = GetCurrentModel();
+ if (SM["FC @ 5’ (Daylight)"] == null)
+ {
+  var BeamA = document.getElementById("BeamAngle");
+  BeamA.innerHTML= SM["Beam Angle"]
+  DistSlider.value = 5;
+  DistOutput.innerHTML = 5;
+  DiameterSlider.value = SM["Spot Diameter @ 5'"];
+  DiameterOutput.innerHTML = SM["Spot Diameter @ 5'"];
+  FCSlider.value = SM["FC @ 5’ (Tungsten)        ."];
+  FCOutput.innerHTML = SM["FC @ 5’ (Tungsten)        ."];
+ }
+else if (SM["FC @ 5’ (Tungsten)        ."] == null)
+{
+  var BeamA = document.getElementById("BeamAngle");
+  BeamA.innerHTML= SM["Beam Angle"]
+  DistSlider.value = 5;
+  DistOutput.innerHTML = 5;
+  DiameterSlider.value = SM["Spot Diameter @ 5'"];
+  DiameterOutput.innerHTML = SM["Spot Diameter @ 5'"];
+  FCSlider.value = SM["FC @ 5’ (Daylight)"];
+  FCOutput.innerHTML = SM["FC @ 5’ (Daylight)"];
+}
+};
 // //Master update function
 // function upateSliders(value1,value2,value3) {
     
@@ -84,7 +118,18 @@ DistOutput.innerHTML= DistResult;
 }
 
 
+function resetSliders()
+{
+  var BeamA = document.getElementById("BeamAngle");
+  BeamA.innerHTML= 0;
+  DistSlider.value = 0;
+  DistOutput.innerHTML = 0;
+  DiameterSlider.value = 0;
+  DiameterOutput.innerHTML = 0;
+  FCSlider.value = 0;
+  FCOutput.innerHTML = 0;
 
+}
 
 //distance slider
 

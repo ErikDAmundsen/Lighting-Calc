@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -14,60 +15,70 @@
 
 <body>
 
-    <div class = "col-md-4" id = "drop down" > 
-      <form>
-    <H3> Choose brand</h3>
-        <select id = "brand" name= "brand" onchange="populateModelList()">  
-            <option value="" selected disabled hidden>Choose a brand</option>  
+  <div class="col-md-4" id="drop down">
+    <form>
+      <H3> Choose brand</h3>
+      <select id="brand" name="brand" onchange="populateModelList()">
+        <option value="" selected disabled hidden>Choose a brand</option>
 
 
-        </select>
-<H3>Select Model</H3>
-        <select id ="model" name="model" oninput="fillValues()", onchange="extractJSON(GetCurrentModel(),'')" >
-          <option value="" >Choose a model</option>  
+      </select>
+      <H3>Select Model</H3>
+      <select id="model" name="model" oninput="fillValues()" , onchange="extractJSON(GetCurrentModel(),'')">
+        <option value="">Choose a model</option>
+       </select>
         
-        </select>
+    </form>
+  </div>
+<div id="TungRadio" style="visibility:hidden">
+  <form>
+        </br>
+       
+        <input type="radio" name="TUNGorDAY" value="Tungsten" onchange="TDfillValues()">Tungsten</br>
+        <input type="radio" name="TUNGorDAY" value="Day Light" onchange="TDfillValues()">Day Light
       </form>
-    </div>
+      </div> 
   </br>
-    </div>
-    <div class="slidecontainer">
-     <div display: inline-block;>
-        <span>Distance: <span id="DistOP"></span></span>
-     </br>
-      <input type="range" min="1" max="150" step = 1 value="0" data-ModelValue="" class="slider" id="DistSlider" onchange="fromDist()">
+  </div>
+  <div class="slidecontainer">
+    <div display: inline-block;>
+      <span>Distance: <span id="DistOP"></span></span>
+      </br>
+      <input type="range" min="1" max="150" step=1 value="0" data-ModelValue="" class="slider" id="DistSlider"
+        onchange="fromDist()">
     </div>
     </br>
     <div class="slidecontainer">
-    <span>Diameter: <span id="DMTOP"></span></span>
-  </br>
-      <input type="range" min="1" max="1500" step = 1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
+      <span>Diameter: <span id="DMTOP"></span></span>
+      </br>
+      <input type="range" min="1" max="1500" step=1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
     </div>
-  </br>
-  <div class="slidecontainer">
-    <span>Foot candles: <span id="FCOP"></span></span>
-  </br>
-      <input type="range" min="1" max="10000" step = 1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
-  </br>
-</br>
-   <span >Beam angle:<span id="BeamAngle"></sapn> </span>
+    </br>
+    <div class="slidecontainer">
+      <span>Foot candles: <span id="FCOP"></span></span>
+      </br>
+      <input type="range" min="1" max="10000" step=1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
+      </br>
+      </br>
+      <span>Beam angle:<span id="BeamAngle"></sapn> </span>
     </div>
   </div>
-    <div id="Referencedata">
-      
-      <p id="showData"> </p>
-    </div>
+  <div id="Referencedata">
 
-    <!-- onchange="upateSliders(this.value) -->
+    <p id="showData"> </p>
+  </div>
 
-  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- onchange="upateSliders(this.value) -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-   <script src="jsonObjects.js"></script>
+  <script src="jsonObjects.js"></script>
   <script src="dropDown.js"></script>
   <script src="Sliders.js"></script>
   <script src="Math.js"></script>
   <script src="RefrenceSheet.js"></script>
 
 </body>
+
 </html>

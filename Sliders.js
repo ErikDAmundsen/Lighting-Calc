@@ -36,11 +36,13 @@ function fillValues() {
     document.getElementById("TungRadio").style.visibility = "visible";
 
     resetSliders();
-
+TDfillValues();
   }
 
   else if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)        ."] == null) {
-    document.getElementById("TungRadio").style.visibility = "hidden";
+   document.getElementById("TungRadio").style.visibility = "hidden";
+    // document.getElementById("Day Light").style.visibility= "visible";
+    
     var BeamA = document.getElementById("BeamAngle");
     BeamA.innerHTML = SM["Beam Angle"]
     DistSlider.value = 5;
@@ -52,6 +54,7 @@ function fillValues() {
 
   }
   else if (SM["FC @ 5’ (Daylight)"] == null && SM["FC @ 5’ (Tungsten)        ."] !== null) {
+    // document.getElementById("Tungsten").style.visibility= "visible";
     document.getElementById("TungRadio").style.visibility = "hidden";
     var BeamA = document.getElementById("BeamAngle");
     BeamA.innerHTML = SM["Beam Angle"]

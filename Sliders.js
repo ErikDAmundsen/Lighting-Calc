@@ -5,7 +5,7 @@ var DiameterSlider = document.getElementById("DMTSlider");
 var DiameterOutput = document.getElementById("DMTOP");
 var FCSlider = document.getElementById("FCSlider");
 var FCOutput = document.getElementById("FCOP");
-var FC = GetCurrentFC();
+var GFC = GetCurrentFC();
 // reusable function to get object of selected model
 function GetCurrentModel() {
   var ModelList = document.getElementById('model');

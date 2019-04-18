@@ -9,7 +9,7 @@ function MDst2Dia()
 function MDst2FC()
 {
     var SM = GetCurrentModel();
-     return Math.round(((5*5)/(DistSlider.value*DistSlider.value)*SM["FC @ 5’ (Daylight)"])); 
+     return Math.round(((5*5)/(DistSlider.value*DistSlider.value)*FC.)); 
 }
 //from DIA
 

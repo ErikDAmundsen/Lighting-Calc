@@ -48,6 +48,9 @@ h1 {
     justify-content: center;
     text-align: center;
 }
-#brandspan , #modelspan{
+#brandspan , #modelspan {
     font-weight: bold;
 } 
+#brand, #model {background-color: #b8b8b8
+
+}

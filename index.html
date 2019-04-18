@@ -27,7 +27,7 @@
       </select>
      </br>
     </br>
-      <span id="modelspan">MODEL</span>
+      <span id="modelspan">MODEL  </span>
       <select id="model" name="model"  onchange=" extractJSON(GetCurrentModel(),'')" oninput="fillValues()" >
         <option value="">Select Model</option>
        </select>
@@ -47,21 +47,21 @@
   <div id= "slidecontainers">
   <div class="slidecontainer">
     
-      <span>Distance: <span id="DistOP"></span></span>
-      </br>
+      <span>DISTANCE   <span id="DistOP"></span></span>
+     
       <input type="range" min="1" max="150" step=1 value="0" data-ModelValue="" class="slider" id="DistSlider"
         onchange="fromDist()">
 
     </br>
     <div class="slidecontainer">
-      <span>Diameter: <span id="DMTOP"></span></span>
-      </br>
+      <span>BEAM WIDTH  <span id="DMTOP"></span></span>
+     
       <input type="range" min="1" max="1500" step=1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
     </div>
-    </br>
+   
     <div class="slidecontainer">
-      <span>Foot candles: <span id="FCOP"></span></span>
-      </br>
+      <span>INTENSITY  <span id="FCOP"></span></span>
+    
       <input type="range" min="1" max="10000" step=1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
       </br>
       </br>
@@ -71,7 +71,7 @@
   </div>
 </div>
 <div id ="BA">
-      <span>Beam angle:<span id="BeamAngle"></sapn> </span>
+      <span>BEAM ANGLE:<span id="BeamAngle"></sapn> </span>
     </div>
   <div id="Referencedata">
 

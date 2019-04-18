@@ -6,29 +6,33 @@
   <meta charset="utf-8">
 
   <title>Lighting Calculator</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+
 
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
-
+  <link rel = "stylesheet"
+  href = "style.css" />
 </head>
 
 <body>
 
-  <div class="col-md-4" id="drop down">
-    <form>
-      <H3> Choose brand</h3>
-      <select id="brand" name="brand" onchange="populateModelList()">
-        <option value="" selected disabled hidden>Choose a brand</option>
-
+  <H1> Photometric Calculator</H1>
+  <div id="calc">
+  <div  id="drop down">
+    
+    <span id="brandspan">BRAND  </span>
+      <select id="brand" name="brand" onchange="populateModelList(), resetSliders()">
+        <option value="" selected disabled hidden>Select Brand</option>
+     
 
       </select>
-      <H3>Select Model</H3>
+     </br>
+    </br>
+      <span id="modelspan">MODEL</span>
       <select id="model" name="model"  onchange=" extractJSON(GetCurrentModel(),'')" oninput="fillValues()" >
-        <option value="">Choose a model</option>
+        <option value="">Select Model</option>
        </select>
         
-    </form>
+    
   </div>
 <div id="TungRadio" style="visibility:hidden">
 
@@ -40,13 +44,14 @@
       </div> 
   </br>
   </div>
+  <div id= "slidecontainers">
   <div class="slidecontainer">
-    <div display: inline-block;>
+    
       <span>Distance: <span id="DistOP"></span></span>
       </br>
       <input type="range" min="1" max="150" step=1 value="0" data-ModelValue="" class="slider" id="DistSlider"
         onchange="fromDist()">
-    </div>
+
     </br>
     <div class="slidecontainer">
       <span>Diameter: <span id="DMTOP"></span></span>
@@ -60,15 +65,20 @@
       <input type="range" min="1" max="10000" step=1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
       </br>
       </br>
-      <span>Beam angle:<span id="BeamAngle"></sapn> </span>
+    </div>
+    
     </div>
   </div>
+</div>
+<div id ="BA">
+      <span>Beam angle:<span id="BeamAngle"></sapn> </span>
+    </div>
   <div id="Referencedata">
 
     <p id="showData"> </p>
   </div>
 
-  
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 

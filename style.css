@@ -1,0 +1,53 @@
+body {
+
+    padding:0;
+    margin:0;
+    background-color: #fcf1f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: rgb(223, 223, 223)
+}
+    #calc{
+        border-top: 6px solid rgb(242, 225, 250);
+        padding-top: 10px;
+        background-color: white;
+        margin-bottom: 25px;
+    }
+#slidecontainers{
+    border-top: 6px solid rgb(250, 235, 225);
+    padding-top: 10px;
+
+        background-color: white;
+        margin-bottom: 25px;
+}
+#BA{ border-top: 6px solid rgb(225, 225, 250);
+    padding-top: 10px;
+    background-color: white;
+
+    margin-bottom: 25px;
+padding-bottom: 25px;
+}
+    #Referencedata{
+        border-top: 6px solid rgb(215, 216, 248);
+    padding-top: 10px;
+        background-color: white;
+        margin-bottom: 25px;
+    }
+
+h1 {
+    padding-top:0;
+     margin-left:0;
+     margin-right:0;
+    height:100px;
+    background-color: #fcf1f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#brandspan , #modelspan{
+    font-weight: bold;
+} 

@@ -14,10 +14,9 @@ function GetCurrentModel() {
   return SelectedModel[0];
 };
 
-function GetCurrentFC()
-{
-var SM = GetCurrentModel();
-var FC = null;
+function GetCurrentFC() {
+  var SM = GetCurrentModel();
+  var FC = null;
 
   if (document.getElementById("Tungsten").checked = true) {
     FC = SM["FC @ 5’ (Tungsten)        ."];
@@ -36,13 +35,13 @@ function fillValues() {
     document.getElementById("TungRadio").style.visibility = "visible";
 
     resetSliders();
-TDfillValues();
+    TDfillValues();
   }
 
   else if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)        ."] == null) {
-   document.getElementById("TungRadio").style.visibility = "hidden";
+    document.getElementById("TungRadio").style.visibility = "hidden";
     // document.getElementById("Day Light").style.visibility= "visible";
-    
+
     var BeamA = document.getElementById("BeamAngle");
     BeamA.innerHTML = SM["Beam Angle"]
     DistSlider.value = 5;
@@ -65,7 +64,7 @@ TDfillValues();
     FCSlider.value = SM["FC @ 5’ (Tungsten)        ."];
     FCOutput.innerHTML = SM["FC @ 5’ (Tungsten)        ."];
   }
-  else{
+  else {
     resetSliders();
   }
 };
@@ -109,14 +108,15 @@ function TDfillValues()
 
 // };
 
-function updateDiaSlider(TestResult) {
-  DiameterSlider.value = TestResult;
-  DiameterOutput.innerHTML = TestResult;
+// function updateDiaSlider(TestResult) {
+//   DiameterSlider.value = TestResult;
+//   DiameterOutput.innerHTML = TestResult;
 
-}
+// }
 
 //updating 2 sliders when you update distance slider
 function fromDist() {
+  DistOutput.innerHTML = DistSlider.value;
   var DiaResult = Math.round(MDst2Dia(DiaResult) * 10) / 10;
   DiameterSlider.value = DiaResult;
   DiameterOutput.innerHTML = DiaResult;
@@ -127,6 +127,8 @@ function fromDist() {
 }
 // updating other 2 sliders when you update diameter
 function fromDiameter() {
+  DiameterOutput.innerHTML = DiameterSlider.value;
+
   var DistResult = Math.round(MDia2Dist(DistResult));
   DistSlider.value = DistResult;
   DistOutput.innerHTML = DistResult;
@@ -137,6 +139,7 @@ function fromDiameter() {
 
 // update other 2 sliders when you update FC
 function fromFC() {
+FCOutput.innerHTML = FCSlider.value;
 
   var DistResult = Math.round(MFC2Dist(DistResult));
   DistSlider.value = DistResult;
@@ -145,8 +148,7 @@ function fromFC() {
   var DiaResult = Math.round(MFC2Dia(DistResult, DiaResult) * 10) / 10;
   DiameterSlider.value = DiaResult;
   DiameterOutput.innerHTML = DiaResult;
-
-}
+  }
 
 
 function resetSliders() {
@@ -165,8 +167,8 @@ function RadioInvis() {
 }
 
 //distance slider
-
-DistSlider.oninput = function () {
+DistSlider.addEventListener("change", DSU)
+function DSU() {
   DistOutput.innerHTML = DistSlider.value;
 
 

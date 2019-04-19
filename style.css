@@ -59,4 +59,11 @@ height: 250px;;
     background-color: #c9c9c9;
     font-size: 25px;
 }
+.subtitle{
+    font-size: 35px;
+    font-weight: bold
+}
+#showData{
+    font-size: 18px;
+}
 

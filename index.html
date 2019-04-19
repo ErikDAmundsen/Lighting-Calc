@@ -20,7 +20,9 @@
  
   <div id="calc">
   <div  id="drop down">
-    
+    <span class="subtitle"> -Select a Fixture- </span>
+  </br>
+</br>
     <span id="brandspan">Brand  </span>
       <select id="brand" name="brand" onchange="populateModelList(), resetSliders()">
     
@@ -54,23 +56,26 @@
   </div>
   <div id= "slidecontainers">
   <div class="slidecontainer">
-    
+    <span class="subtitle">-Photometric Data-</span>
+  </br>
+</br>
       <span id="D">Distance (feet)   <span id="DistOP"></span></span>
      
-      <input type="range" min="1" max="150" step=1 value="0" data-ModelValue="" class="slider" id="DistSlider"
+      <input type="range" min="1" max="150" step=1 value="0" style=" width:250px;" data-ModelValue="" class="slider" id="DistSlider"
         onchange="fromDist()">
 
     </br>
+
     <div class="slidecontainer">
       <span id="B">Beam Width (feet)  <span id="DMTOP"></span></span>
      
-      <input type="range" min="1" max="1500" step=1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
+      <input type="range" min="1" max="200" step=1 value="0" style=" width:250px;" class="slider" id="DMTSlider" onchange="fromDiameter()">
     </div>
    
     <div class="slidecontainer">
       <span id="I">Intensity (foot candles)  <span id="FCOP"></span></span>
     
-      <input type="range" min="1" max="10000" step=1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
+      <input type="range" min="1" max="10000" step=1 value="0" style=" width:250px;" class="slider" id="FCSlider" onchange="fromFC()">
       </br>
       </br>
     </div>
@@ -79,8 +84,8 @@
   </div>
 </div>
 
-  <div id="Referencedata">
-
+  <div class="subtitle" id="Referencedata">
+<span id>-Fixture Details-</span>
     <p id="showData"> </p>
   </div>
 

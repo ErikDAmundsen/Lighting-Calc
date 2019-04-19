@@ -5,7 +5,7 @@ var DiameterSlider = document.getElementById("DMTSlider");
 var DiameterOutput = document.getElementById("DMTOP");
 var FCSlider = document.getElementById("FCSlider");
 var FCOutput = document.getElementById("FCOP");
-var GFC = GetCurrentFC();
+// var GFC = GetCurrentFC();
 // reusable function to get object of selected model
 function GetCurrentModel() {
   var ModelList = document.getElementById('model');
@@ -18,10 +18,10 @@ function GetCurrentFC() {
   var SM = GetCurrentModel();
   var FC = null;
 
-  if (document.getElementById("Tungsten").checked = true) {
+  if (document.getElementById("Tungsten").checked == true) {
     FC = SM["FC @ 5’ (Tungsten)"] ;
   }
-  else if (document.getElementById("Day Light").checked = true) {
+  else if (document.getElementById("Day Light").checked == true) {
     FC = SM["FC @ 5’ (Daylight)"];
   }
   else
@@ -34,14 +34,14 @@ function fillValues() {
 
   var SM = GetCurrentModel();
   if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)"] !== null) {
-    document.getElementById("TungRadio").style.visibility = "visible";
+    document.getElementById("TungRadio").style.display = "block";
 
     resetSliders();
     TDfillValues();
   }
 
   else if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)"]  == null) {
-    document.getElementById("TungRadio").style.visibility = "hidden";
+    document.getElementById("TungRadio").style.display = "block";
     // document.getElementById("Day Light").style.visibility= "visible";
 
     var BeamA = document.getElementById("BeamAngle");
@@ -56,7 +56,7 @@ function fillValues() {
   }
   else if (SM["FC @ 5’ (Daylight)"] == null && SM["FC @ 5’ (Tungsten)"]  !== null) {
     // document.getElementById("Tungsten").style.visibility= "visible";
-    document.getElementById("TungRadio").style.visibility = "hidden";
+    document.getElementById("TungRadio").style.display = "block";
     var BeamA = document.getElementById("BeamAngle");
     BeamA.innerHTML = SM["Beam Angle"]
     DistSlider.value = 5;
@@ -165,12 +165,11 @@ function resetSliders() {
 
 }
 function RadioInvis() {
-  document.getElementById("TungRadio").style.visibility = "hidden";
+  document.getElementById("TungRadio").style.display = "block";
 }
 
 //distance slider
-DistSlider.addEventListener("change", DSU)
-function DSU() {
+DistSlider.oninput = function(){
   DistOutput.innerHTML = DistSlider.value;
 
 

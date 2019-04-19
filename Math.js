@@ -8,8 +8,9 @@ function MDst2Dia()
 }
 function MDst2FC()
 {
-    var SM = GetCurrentModel();
-     return Math.round(((5*5)/(DistSlider.value*DistSlider.value)*FC.)); 
+    
+    var GFC = GetCurrentFC();
+     return Math.round(((5*5)/(DistSlider.value*DistSlider.value)* GFC)); 
 }
 //from DIA
 
@@ -19,15 +20,17 @@ return(DiameterSlider.value/(SM["Beam Angle"]*0.018))
 }
 
 function MDia2FC(distResult) {
-    var SM = GetCurrentModel();
-return ((5*5)/(distResult*distResult)*(SM["FC @ 5’ (Daylight)"]));
+    
+    var GFC = GetCurrentFC();
+return ((5*5)/(distResult*distResult)*(GFC));
 }
 //from FC
 
 
 function MFC2Dist(){
-    var SM = GetCurrentModel();
- return Math.sqrt((SM["FC @ 5’ (Daylight)"]/FCSlider.value)*(5*5) )
+    var GFC = GetCurrentFC();
+    
+ return Math.sqrt((GFC/FCSlider.value)*(5*5) )
 }
 
 function MFC2Dia(distResult){

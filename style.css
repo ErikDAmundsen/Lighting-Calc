@@ -8,30 +8,29 @@ body {
     justify-content: center;
     text-align: center;
     font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: rgb(223, 223, 223)
+    background-color: white;
 }
     #calc{
-        border-top: 6px solid rgb(242, 225, 250);
+       
         padding-top: 10px;
         background-color: white;
         margin-bottom: 25px;
     }
 #slidecontainers{
-    border-top: 6px solid rgb(250, 235, 225);
+    border-top: 24px solid #F7BE45;
     padding-top: 10px;
 
         background-color: white;
         margin-bottom: 25px;
 }
-#BA{ border-top: 6px solid rgb(225, 225, 250);
-    padding-top: 10px;
+#BA{
+    padding-top: 15px;
     background-color: white;
 
-    margin-bottom: 25px;
-padding-bottom: 25px;
+
 }
     #Referencedata{
-        border-top: 6px solid rgb(215, 216, 248);
+        border-top: 24px solid #212E40;
     padding-top: 10px;
         background-color: white;
         margin-bottom: 25px;
@@ -42,7 +41,7 @@ h1 {
      margin-left:0;
      margin-right:0;
     height:100px;
-    background-color: #fcf1f8;
+    background-color: #BCD2D8;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,6 +50,6 @@ h1 {
 #brandspan , #modelspan , #D , #B, #I {
     font-weight: bold;
 } 
-#brand, #model {background-color: #b8b8b8
+#brand, #model {background-color: #c9c9c9
 
 }

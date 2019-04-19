@@ -19,11 +19,13 @@ function GetCurrentFC() {
   var FC = null;
 
   if (document.getElementById("Tungsten").checked = true) {
-    FC = SM["FC @ 5’ (Tungsten)        ."];
+    FC = SM["FC @ 5’ (Tungsten)"] ;
   }
   else if (document.getElementById("Day Light").checked = true) {
     FC = SM["FC @ 5’ (Daylight)"];
   }
+  else
+  {FC=0;}
   return FC;
 }
 var SM = GetCurrentModel();
@@ -31,14 +33,14 @@ var SM = GetCurrentModel();
 function fillValues() {
 
   var SM = GetCurrentModel();
-  if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)        ."] !== null) {
+  if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)"] !== null) {
     document.getElementById("TungRadio").style.visibility = "visible";
 
     resetSliders();
     TDfillValues();
   }
 
-  else if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)        ."] == null) {
+  else if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)"]  == null) {
     document.getElementById("TungRadio").style.visibility = "hidden";
     // document.getElementById("Day Light").style.visibility= "visible";
 
@@ -52,7 +54,7 @@ function fillValues() {
     FCOutput.innerHTML = SM["FC @ 5’ (Daylight)"];
 
   }
-  else if (SM["FC @ 5’ (Daylight)"] == null && SM["FC @ 5’ (Tungsten)        ."] !== null) {
+  else if (SM["FC @ 5’ (Daylight)"] == null && SM["FC @ 5’ (Tungsten)"]  !== null) {
     // document.getElementById("Tungsten").style.visibility= "visible";
     document.getElementById("TungRadio").style.visibility = "hidden";
     var BeamA = document.getElementById("BeamAngle");
@@ -61,8 +63,8 @@ function fillValues() {
     DistOutput.innerHTML = 5;
     DiameterSlider.value = SM["Spot Diameter @ 5'"];
     DiameterOutput.innerHTML = SM["Spot Diameter @ 5'"];
-    FCSlider.value = SM["FC @ 5’ (Tungsten)        ."];
-    FCOutput.innerHTML = SM["FC @ 5’ (Tungsten)        ."];
+    FCSlider.value = SM["FC @ 5’ (Tungsten)"] ;
+    FCOutput.innerHTML = SM["FC @ 5’ (Tungsten)"] ;
   }
   else {
     resetSliders();
@@ -80,8 +82,8 @@ function TDfillValues()
     DistOutput.innerHTML = 5;
     DiameterSlider.value = SM["Spot Diameter @ 5'"];
     DiameterOutput.innerHTML = SM["Spot Diameter @ 5'"];
-    FCSlider.value = SM["FC @ 5’ (Tungsten)        ."];
-    FCOutput.innerHTML = SM["FC @ 5’ (Tungsten)        ."];
+    FCSlider.value = SM["FC @ 5’ (Tungsten)"] ;
+    FCOutput.innerHTML = SM["FC @ 5’ (Tungsten)"] ;
   }
   else if (document.getElementById("Day Light").checked == true) {
     var BeamA = document.getElementById("BeamAngle");

@@ -15,11 +15,11 @@
 
 <body>
 
-  <H1> Photometric Calculator</H1>
+  <H1> PHOTOMETRIC CALCULATOR</H1>
   <div id="calc">
   <div  id="drop down">
     
-    <span id="brandspan">BRAND  </span>
+    <span id="brandspan">Brand  </span>
       <select id="brand" name="brand" onchange="populateModelList(), resetSliders()">
         <option value="" selected disabled hidden>Select Brand</option>
      
@@ -27,40 +27,43 @@
       </select>
      </br>
     </br>
-      <span id="modelspan">MODEL  </span>
+      <span id="modelspan">Model  </span>
       <select id="model" name="model"  onchange=" extractJSON(GetCurrentModel(),'')" oninput="fillValues()" >
         <option value="">Select Model</option>
        </select>
-        
+       
     
   </div>
-<div id="TungRadio" style="visibility:hidden">
+<div id="TungRadio" style="visibility: hidden">
 
         </br>
        
         <input type="radio" name ="TungDay" id= "Tungsten"  value="Tungsten" onchange="TDfillValues()">Tungsten</br>
         <input type="radio" name ="TungDay" id = "Day Light"  value="Day Light" onchange="TDfillValues()">Day Light
      
-      </div> 
-  </br>
+      </div>
+      <div id ="BA">
+          <span>BEAM ANGLE:<span id="BeamAngle"></span> <span>°</span> </span>
+        </div> 
+  
   </div>
   <div id= "slidecontainers">
   <div class="slidecontainer">
     
-      <span id="D">DISTANCE   <span id="DistOP"></span></span>
+      <span id="D">Distance(feet)   <span id="DistOP"></span></span>
      
       <input type="range" min="1" max="150" step=1 value="0" data-ModelValue="" class="slider" id="DistSlider"
         onchange="fromDist()">
 
     </br>
     <div class="slidecontainer">
-      <span id="B">BEAM WIDTH  <span id="DMTOP"></span></span>
+      <span id="B">Beam Width(feet)  <span id="DMTOP"></span></span>
      
       <input type="range" min="1" max="1500" step=1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
     </div>
    
     <div class="slidecontainer">
-      <span id="I">INTENSITY  <span id="FCOP"></span></span>
+      <span id="I">Intensity(foot candles)  <span id="FCOP"></span></span>
     
       <input type="range" min="1" max="10000" step=1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
       </br>
@@ -70,9 +73,7 @@
     </div>
   </div>
 </div>
-<div id ="BA">
-      <span>BEAM ANGLE:<span id="BeamAngle"></span> <span>°</span> </span>
-    </div>
+
   <div id="Referencedata">
 
     <p id="showData"> </p>

@@ -11,10 +11,11 @@ body {
     background-color: white;
 }
     #calc{
-       
+       border-top: 24px solid #BCD2D8;
         padding-top: 10px;
         background-color: white;
         margin-bottom: 25px;
+        font-size: 30px;
     }
 #slidecontainers{
     border-top: 24px solid #F7BE45;
@@ -35,8 +36,11 @@ body {
         background-color: white;
         margin-bottom: 25px;
     }
-
-h1 {
+#fotocal{
+height: 250px;;
+}
+/* h1 {
+    font-size:55px;
     padding-top:0;
      margin-left:0;
      margin-right:0;
@@ -46,10 +50,13 @@ h1 {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-}
+} */
 #brandspan , #modelspan , #D , #B, #I {
     font-weight: bold;
+    font-size:30px;
 } 
-#brand, #model {background-color: #c9c9c9
-
+#brand, #model {
+    background-color: #c9c9c9;
+    font-size: 25px;
 }
+

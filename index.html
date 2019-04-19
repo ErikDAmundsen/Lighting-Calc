@@ -14,13 +14,16 @@
 </head>
 
 <body>
-
-  <H1> PHOTOMETRIC CALCULATOR</H1>
+    <object type="image/svg+xml" data="fotocal-01.svg" id="fotocal">
+      Your browser does not support SVG
+    </object>
+ 
   <div id="calc">
   <div  id="drop down">
     
     <span id="brandspan">Brand  </span>
       <select id="brand" name="brand" onchange="populateModelList(), resetSliders()">
+    
         <option value="" selected disabled hidden>Select Brand</option>
      
 
@@ -29,7 +32,9 @@
     </br>
       <span id="modelspan">Model  </span>
       <select id="model" name="model"  onchange=" extractJSON(GetCurrentModel(),'')" oninput="fillValues()" >
+      
         <option value="">Select Model</option>
+      
        </select>
        
     
@@ -43,27 +48,27 @@
      
       </div>
       <div id ="BA">
-          <span>BEAM ANGLE:<span id="BeamAngle"></span> <span>°</span> </span>
+          <span>Beam angle:<span id="BeamAngle"></span> <span>°</span> </span>
         </div> 
   
   </div>
   <div id= "slidecontainers">
   <div class="slidecontainer">
     
-      <span id="D">Distance(feet)   <span id="DistOP"></span></span>
+      <span id="D">Distance (feet)   <span id="DistOP"></span></span>
      
       <input type="range" min="1" max="150" step=1 value="0" data-ModelValue="" class="slider" id="DistSlider"
         onchange="fromDist()">
 
     </br>
     <div class="slidecontainer">
-      <span id="B">Beam Width(feet)  <span id="DMTOP"></span></span>
+      <span id="B">Beam Width (feet)  <span id="DMTOP"></span></span>
      
       <input type="range" min="1" max="1500" step=1 value="0" class="slider" id="DMTSlider" onchange="fromDiameter()">
     </div>
    
     <div class="slidecontainer">
-      <span id="I">Intensity(foot candles)  <span id="FCOP"></span></span>
+      <span id="I">Intensity (foot candles)  <span id="FCOP"></span></span>
     
       <input type="range" min="1" max="10000" step=1 value="0" class="slider" id="FCSlider" onchange="fromFC()">
       </br>

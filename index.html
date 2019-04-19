@@ -24,7 +24,7 @@
   </br>
 </br>
     <span id="brandspan">Brand  </span>
-      <select id="brand" name="brand" onchange="populateModelList(), resetSliders()">
+      <select id="brand" name="brand" onchange="populateModelList(),RadioInvis(), resetSliders()">
     
         <option value="" selected disabled hidden>Select Brand</option>
      
@@ -33,7 +33,7 @@
      </br>
     </br>
       <span id="modelspan">Model  </span>
-      <select id="model" name="model"  onchange=" extractJSON(GetCurrentModel(),'')" oninput="fillValues()" >
+      <select id="model" name="model"  onchange=" extractJSON(GetCurrentModel(),'')" oninput="RadioInvis(),fillValues()" >
       
         <option value="">Select Model</option>
       
@@ -41,12 +41,12 @@
        
     
   </div>
-<div id="TungRadio" style="display:none">
+<div id="TungRadio" >
 
         </br>
        
-        <input type="radio" name ="TungDay" id= "Tungsten"  value="Tungsten" onchange="TDfillValues()">Tungsten</br>
-        <input type="radio" name ="TungDay" id = "Day Light"  value="Day Light" onchange="TDfillValues()">Day Light
+        <input type="radio" name ="TungDay" id = "Day Light" style="display:none" value="Day Light" onchange="TDfillValues()"><span id="DayLightText" style="display:none">Day Light</span></br>
+        <input type="radio" name ="TungDay" id= "Tungsten" style="display:none" value="Tungsten" onchange="TDfillValues()"><span id="TungstenText"style="display:none">Tungsten</span>
      
       </div>
       <div id ="BA">

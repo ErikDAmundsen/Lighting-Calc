@@ -34,14 +34,19 @@ function fillValues() {
 
   var SM = GetCurrentModel();
   if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)"] !== null) {
-    document.getElementById("TungRadio").style.display = "block";
-
+    document.getElementById("Tungsten").style.display = "inline";
+    document.getElementById("Day Light").style.display = "inline";
+    document.getElementById("DayLightText").style.display = "inline";
+    document.getElementById("TungstenText").style.display = "inline";
+    document.getElementById("Day Light").checked = true;
     resetSliders();
     TDfillValues();
   }
 
   else if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)"]  == null) {
-    document.getElementById("TungRadio").style.display = "block";
+    document.getElementById("Day Light").style.display = "iniine";
+    document.getElementById("DayLightText").style.display = "inline";
+    document.getElementById("Day Light").checked = true;
     // document.getElementById("Day Light").style.visibility= "visible";
 
     var BeamA = document.getElementById("BeamAngle");
@@ -56,7 +61,10 @@ function fillValues() {
   }
   else if (SM["FC @ 5’ (Daylight)"] == null && SM["FC @ 5’ (Tungsten)"]  !== null) {
     // document.getElementById("Tungsten").style.visibility= "visible";
-    document.getElementById("TungRadio").style.display = "block";
+    document.getElementById("Tungsten").style.display = "inline";
+    document.getElementById("TungstenText").style.display = "inline";
+
+    document.getElementById("Tungsten").checked = true;
     var BeamA = document.getElementById("BeamAngle");
     BeamA.innerHTML = SM["Beam Angle"]
     DistSlider.value = 5;
@@ -165,7 +173,11 @@ function resetSliders() {
 
 }
 function RadioInvis() {
-  document.getElementById("TungRadio").style.display = "block";
+  document.getElementById("Tungsten").style.display = "none";
+  document.getElementById("Day Light").style.display = "none";
+  document.getElementById("DayLightText").style.display = "none";
+  document.getElementById("TungstenText").style.display = "none";
+
 }
 
 //distance slider

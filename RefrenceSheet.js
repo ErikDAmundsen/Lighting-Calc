@@ -10,3 +10,4 @@ function extractJSON(obj,indent) {
         dataBox.innerHTML += (indent + i.bold() + ': ' + obj[i]+ "</br>");
       }
     }
+    

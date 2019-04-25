@@ -59,6 +59,7 @@ function fillValues() {
     FCOutput.innerHTML = SM["FC @ 5’ (Daylight)"];
 
   }
+  
   else if (SM["FC @ 5’ (Daylight)"] == null && SM["FC @ 5’ (Tungsten)"]  !== null) {
     // document.getElementById("Tungsten").style.visibility= "visible";
     document.getElementById("Tungsten").style.display = "inline";

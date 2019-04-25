@@ -33,6 +33,7 @@ function MFC2Dist(){
  return Math.sqrt((GFC/FCSlider.value)*(5*5) )
 }
 
+
 function MFC2Dia(distResult){
     var SM = GetCurrentModel();
     return (SM["Beam Angle"]*0.018*distResult);

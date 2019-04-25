@@ -36,6 +36,7 @@ function populateModelList() {
         newOption.innerHTML = model.Model;
         ModelList.appendChild(newOption);
 
+        
        
     })};
     

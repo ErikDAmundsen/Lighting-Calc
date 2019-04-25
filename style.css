@@ -66,4 +66,23 @@ height: 200px;;
 #showData{
     font-size: 18px;
 }
+/* 
+#DistSlider {
+    left:55%;
+    
 
+}
+#DMTSlider{
+    position: fixed;
+    left:55%;
+
+}
+
+#FCSlider{
+    left: 55%;
+} */
+.slider{
+    position: static ;
+    left:55%;
+    width:100%;
+}

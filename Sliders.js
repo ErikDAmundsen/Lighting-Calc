@@ -116,15 +116,6 @@ function TDfillValues()
 
 
 
-
-// };
-
-// function updateDiaSlider(TestResult) {
-//   DiameterSlider.value = TestResult;
-//   DiameterOutput.innerHTML = TestResult;
-
-// }
-
 //updating 2 sliders when you update distance slider
 function fromDist() {
   DistOutput.innerHTML = DistSlider.value;

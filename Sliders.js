@@ -31,8 +31,25 @@ function GetCurrentFC() {
 var SM = GetCurrentModel();
 //assign slider values and Beam angle to start
 function fillValues() {
-
   var SM = GetCurrentModel();
+var  BAString = SM["Beam Angle"];
+
+if (BAString.includes("-"))
+{
+var BASpl = BAString.split("-");
+ var BASplit = BASpl.map(Number);
+  var BAMin = Math.min(...BASplit);
+  var BAMax = Math.max(...BASplit);
+  //create array from minmax of range
+  let BARange = [];
+  while(BAMin <= BAMax)
+  {BARange.push(BAMin++);}
+  console.log(BARange);
+
+  
+
+}
+
   if (SM["FC @ 5’ (Daylight)"] !== null && SM["FC @ 5’ (Tungsten)"] !== null) {
     document.getElementById("Tungsten").style.display = "inline";
     document.getElementById("Day Light").style.display = "inline";

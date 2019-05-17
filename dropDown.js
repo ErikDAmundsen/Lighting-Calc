@@ -14,6 +14,7 @@ $(document).ready(function () {
         newOption.value = opt;
         BrandList.appendChild(newOption);
     };
+    
 });
 // UniqeBrandArray.forEach(function (B) {
 //     var newOption = document.createElement("option");

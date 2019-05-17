@@ -28,6 +28,7 @@ function GetCurrentFC() {
   {FC=0;}
   return FC;
 }
+
 var SM = GetCurrentModel();
 //assign slider values and Beam angle to start
 function fillValues() {

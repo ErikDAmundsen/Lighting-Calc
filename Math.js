@@ -14,7 +14,6 @@ function MDst2FC()
 }
 //from DIA
 
-
 function MDia2Dist() {
     var SM = GetCurrentModel();
 return(DiameterSlider.value/(SM["Beam Angle"]*0.018))

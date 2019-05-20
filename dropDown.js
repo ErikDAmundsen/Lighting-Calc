@@ -5,7 +5,6 @@ $(document).ready(function () {
         ...new Set(FullSpecs.map(x => x.Brand))];
 
 
-
     for (var i = 0; i < UniqeBrandArray.length; i++) {
         var BrandList = document.getElementById('brand');
         var opt = UniqeBrandArray[i];
@@ -14,7 +13,7 @@ $(document).ready(function () {
         newOption.value = opt;
         BrandList.appendChild(newOption);
     };
-    
+
 });
 // UniqeBrandArray.forEach(function (B) {
 //     var newOption = document.createElement("option");

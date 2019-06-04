@@ -34,8 +34,8 @@ var SM = GetCurrentModel();
 function fillValues() {
   var SM = GetCurrentModel();
 var  BAString = SM["Beam Angle"];
-
-if (BAString.includes("-"))
+var BA2STRING = BAString.toString();
+if (BA2STRING.includes("-"))
 {
 var BASpl = BAString.split("-");
  var BASplit = BASpl.map(Number);

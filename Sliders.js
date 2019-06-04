@@ -96,7 +96,7 @@ var BASpl = BAString.split("-");
   else {
     resetSliders();
   }
-}
+};
 
 function TDfillValues()
 // document.querySelector('input[name="gender"]:checked').value

@@ -4,7 +4,7 @@ function MDst2Dia()
 {
     var SM = GetCurrentModel();
    
-     return (SM["Beam Angle"]*0.018*DistSlider.value);
+     return (BeamAngle.value*0.018*DistSlider.value);
 }
 function MDst2FC()
 {
@@ -16,7 +16,7 @@ function MDst2FC()
 
 function MDia2Dist() {
     var SM = GetCurrentModel();
-return(DiameterSlider.value/(SM["Beam Angle"]*0.018))
+return(DiameterSlider.value/(BeamAngle.value*0.018))
 }
 
 function MDia2FC(distResult) {
@@ -36,5 +36,5 @@ function MFC2Dist(){
 
 function MFC2Dia(distResult){
     var SM = GetCurrentModel();
-    return (SM["Beam Angle"]*0.018*distResult);
+    return (BeamAngle.value*0.018*distResult);
 }

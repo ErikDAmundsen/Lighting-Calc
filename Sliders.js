@@ -38,17 +38,18 @@ var  BAString = SM["Beam Angle"];
 var BA2STRING = BAString.toString();
 if (BA2STRING.includes("-"))
 {
+  // document.getElementById("BA").style.display = "inline";
+
 var BASpl = BAString.split("-");
  var BASplit = BASpl.map(Number);
   var BAMin = Math.min(...BASplit);
   var BAMax = Math.max(...BASplit);
   //create array from minmax of range
-  let BARange = [];
+   let BARange = [];
   while(BAMin <= BAMax)
   {BARange.push(BAMin++);}
   console.log(BARange);
-
-  
+fillAngle(BARange);
 
 }
 
@@ -98,6 +99,21 @@ var BASpl = BAString.split("-");
     resetSliders();
   }
 };
+
+//populate variable angle
+function fillAngle(BARange) {
+document.getElementById("BeamAngleChoose").style.display = "inline";
+  for (i = 0 ;i < BARange.length; i++)
+  {
+    var AngleList =document.getElementById("BeamAngleChoose");
+    var curan = BARange[i];
+    var newoption = document.createElement("option");
+    newoption.textContent = curan;
+    newoption.value = curan;
+    AngleList.appendChild(newoption);
+
+  }
+}
 
 function TDfillValues()
 // document.querySelector('input[name="gender"]:checked').value

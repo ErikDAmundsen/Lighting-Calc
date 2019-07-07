@@ -50,11 +50,13 @@
         <input type="radio" name ="TungDay" id= "Tungsten" style="display:none" value="Tungsten" onchange="TDfillValues()"><span id="TungstenText"style="display:none">Tungsten</span>
      
       </div>
+    </br>
       <div id ="BA">
-        <select id = "BeamAngleChoose" style="display:none"></select>
+        <select id = "BeamAngleChoose" style="" onchange="TDfillValues(), fillAngle()"></select>
           <span>Beam angle:<span id="BeamAngle"></span> <span>°</span> </span>
         </div> 
-  
+     
+
   </div>
   <div id= "slidecontainers">
   <div class="slidecontainer">

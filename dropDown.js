@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     const UniqeBrandArray = [
         ...new Set(FullSpecs.map(x => x.Brand))];
-
+    // console.log(UniqeBrandArray);
 
     for (var i = 0; i < UniqeBrandArray.length; i++) {
         var BrandList = document.getElementById('brand');

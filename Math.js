@@ -36,5 +36,9 @@ function MFC2Dist(){
 
 function MFC2Dia(distResult){
     var SM = GetCurrentModel();
+
     return (BeamAngle.value*0.018*distResult);
 }
+
+  
+

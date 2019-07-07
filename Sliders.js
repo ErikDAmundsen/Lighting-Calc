@@ -115,6 +115,10 @@ document.getElementById("BeamAngleChoose").style.display = "inline";
   }
 }
 
+function upAng(){
+BeamAngle.value = BeamAngleChoose.value; 
+BeamAngle.innerHTML = BeamAngle.value; 
+}
 function TDfillValues()
 // document.querySelector('input[name="gender"]:checked').value
 {
@@ -213,6 +217,8 @@ function RadioInvis() {
   document.getElementById("Day Light").style.display = "none";
   document.getElementById("DayLightText").style.display = "none";
   document.getElementById("TungstenText").style.display = "none";
+  document.getElementById("BeamAngleChoose").style.display = "none";
+  BeamAngleChoose.innerHTML = "<option value='' selected disabled hidden>Select Angle</option>";
 
 }
 

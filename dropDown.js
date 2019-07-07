@@ -15,14 +15,7 @@ $(document).ready(function () {
     };
 
 });
-// UniqeBrandArray.forEach(function (B) {
-//     var newOption = document.createElement("option");
-//     var BrandList = document.getElementById('brand');
-//     newOption.setAttribute('value', B);
-//     newOption.innerHTML = B;
-//     BrandList.appendChild(newOption);
-//     })
-// })
+
 
 // //    populate model drop down
 function populateModelList() {

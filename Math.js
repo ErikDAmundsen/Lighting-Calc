@@ -3,7 +3,12 @@
 function MDst2Dia()
 {
     var SM = GetCurrentModel();
-   
+  //testing 1
+    if(BeamAngle.value == null)
+   {
+        BeamAngle.value = SM["Beam Angle"]
+   }
+   // end test 1
      return (BeamAngle.value*0.018*DistSlider.value);
 }
 function MDst2FC()
